@@ -6,6 +6,6 @@
     <title>Cerrar Sesion</title>
 </head>
 <body>
-    <a href="./index.php"></a>
+    <a href=".:/index.php"></a>
 </body>
 </html>

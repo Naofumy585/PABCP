@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MICROFINANCIERA</title>
-    <link rel="stylesheet" href="./SRC/CSS/style.css">
+    <link rel="stylesheet" href="../SRC/CSS/style.css">
     <link rel="stylesheet" href="cl-icon/css/all.min.css">
     
     
@@ -13,7 +13,7 @@
 
 <body>
     <div class="wrapper">
-        <form action="./SRC/VISTAS/menu.php" class="form">
+        <form action="../SRC/VISTAS/menu.php" class="form">
             <h1 class="title">INICIO</h1>
             <div class="inp">
                 <input type="text" name="" id="" class="input" placeholder="usuario">
@@ -30,7 +30,7 @@
         <div></div>
         <div class="banner">
             <h1 class="we_text">Bienvenido</h1>
-            <img src="./SRC/VISTAS/Img/MICRO.PNG.png" width="190px" height="190px" alt="">
+            <img src="../SRC/VISTAS/Img/MICRO.PNG.png" width="190px" height="190px" alt="">
           
         
 

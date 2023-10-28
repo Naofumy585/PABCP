@@ -99,7 +99,7 @@
                     <img src="<?php echo $ruta_clienteN; ?>" alt="Cliente nuevo" class="w-100 menu-image"
                         style="height: 200px;">
                     <!-- Botón para agregar nuevo cliente -->
-                    <a href="./registroCliente.php">
+                    <a href="../registroCliente.php">
                         <button type="button" class="btn btn-primary mt-2 menu-button">Nuevo Cliente</button>
                     </a>
                 </div>
@@ -107,7 +107,7 @@
                     <img src="<?php echo $ruta_seguimiento; ?>" alt="Seguimiento de préstamo" class="w-100 menu-image"
                         style="height: 200px;">
                     <!-- Botón para seguimiento de préstamo -->
-                    <a href="./segimientoprestamo.php">
+                    <a href="../segimientoprestamo.php">
                         <button type="button" class="btn btn-primary mt-2 menu-button">Seguimiento de Préstamo</button>
                     </a>
                 </div>
@@ -115,7 +115,7 @@
                     <img src="<?php echo $ruta_Estadocuenta; ?>" alt="Estado de cuenta" class="w-100 menu-image"
                         style="height: 200px;">
                     <!-- Botón para ver el estado de cuenta -->
-                    <a href="./estadocuenta.php">
+                    <a href="../estadocuenta.php">
                         <button type="button" class="btn btn-primary mt-2 menu-button">Estado de Cuenta</button>
                     </a>
                 </div>

@@ -54,7 +54,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="./Img/MICRO.PNG.png" alt="Imagen de encabezado">
+        <img src="../Img/MICRO.PNG.png" alt="Imagen de encabezado">
         <h1>Módulo de Búsqueda de Clientes Activos</h1>
     </div>
     <br>

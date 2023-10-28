@@ -54,7 +54,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="./Img/MICRO.PNG.png"  alt="Imagen de encabezado"> <!-- Reemplaza "tu-imagen.jpg" con la URL de tu imagen -->
+        <img src="../Img/MICRO.PNG.png"  alt="Imagen de encabezado"> <!-- Reemplaza "tu-imagen.jpg" con la URL de tu imagen -->
         <h1>Registro de Clientes </h1>
     </div>
 
