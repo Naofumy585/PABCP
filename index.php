@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pomperrier&display=swap">
-    <link rel="stylesheet" href="../Bootstrap/css/style_index.css">
-    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Bootstrap/css/style_index.css">
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
     <title>Inicio</title>
     <style>
          * {
@@ -23,18 +23,18 @@
                 <ul class="navbar-nav ml-auto"class="nav justify-content-end">
                     <li class="nav-item"><img  src="./img/1.png" alt="Imagen 1"></li>
                     <li class="nav-item">"Dulce nectar"</li>
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../P_Enlace/Productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="../P_Enlace/Nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link disable" href="../P_Enlace/Contacto.html" tabindex="-1" aria-disabled="true">Contacto</a></li>
-                    <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
-                    <li class="nav-item"><a href="./Usuario/Registro.html"><img src="../img/a2.png" alt="Imagen 2"></a></li>
-                    <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./index.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./P_Enlace/Productos.php">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./P_Enlace/Nosotros.php">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link disable" href="./P_Enlace/Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
+                    <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="./img/diseños/ac.png" alt="Imagen 1"></a></li>
+                    <li class="nav-item"><a href="./Usuario/Registro.php"><img src="./img/a2.png" alt="Imagen 2"></a></li>
+                    <li class="nav-item"><a href="#"><img src="./img/b2.png" alt="Imagen 3"></a></li>
                 </ul>
             </nav>
         </section>
 
-            <img src="../img/q/1.jpg" alt="Banner" class="banner img-fluid mb-4">
+            <img src="./img/q/1.jpg" alt="Banner" class="banner img-fluid mb-4">
 
             <div class="container mt-4">
                 <!-- Otras partes del código... -->
@@ -44,16 +44,16 @@
                 <!-- Div con las imágenes de la promocióOn -->
                 <div class="row " >
                     <div class="col-md-3">
-                        <img src="../img/descarga.jpg" alt="Promoción 1" class="img-fluid mb-2">
+                        <img src="./img/descarga.jpg" alt="Promoción 1" class="img-fluid mb-2">
                     </div>
                     <div class="col-md-3">
-                        <img src="../img/descarga (1).jpg" alt="Promoción 2" class="img-fluid mb-2">
+                        <img src="./img/descarga (1).jpg" alt="Promoción 2" class="img-fluid mb-2">
                     </div>
                     <div class="col-md-3">
                         <img src="./img/descarga (2).jpg" alt="Promoción 3" class="img-fluid mb-2">
                     </div>
                     <div class="col-md-3">
-                        <img src="../img/PROMOCION-1.2-kilos-miel-de-abeja-Panal-Real.jpg" alt="Promoción 4" class="img-fluid mb-2">
+                        <img src="./img/PROMOCION-1.2-kilos-miel-de-abeja-Panal-Real.jpg" alt="Promoción 4" class="img-fluid mb-2">
                     </div>
                 </div>
             
@@ -66,19 +66,19 @@
             <!-- Tabla con espacio para 4 imágenes -->
             <div class="row">
                 <div class="col-md-3">
-                    <img src="../img/Video para post de Instagram Beneficios de la miel moderno amarillo.png" alt="Producto 1" class="img-fluid">
+                    <img src="./img/Video para post de Instagram Beneficios de la miel moderno amarillo.png" alt="Producto 1" class="img-fluid">
                     <p>Miel y salud</p>
                 </div>
                 <div class="col-md-3">
-                    <img src="../img/1.jpg" alt="Producto 2" class="img-fluid">
+                    <img src="./img/1.jpg" alt="Producto 2" class="img-fluid">
                     <p>Proceso</p>
                 </div>
                 <div class="col-md-3">
-                    <img src="../img/2.jpg" alt="Producto 3" class="img-fluid">
+                    <img src="./img/2.jpg" alt="Producto 3" class="img-fluid">
                     <p>Productos de colmena</p>
                 </div>
                 <div class="col-md-3">
-                    <img src="../img/3.jpg" alt="Producto 4" class="img-fluid">
+                    <img src="./img/3.jpg" alt="Producto 4" class="img-fluid">
                     <p>Tipos de miel</p>
                 </div>
             </div>
@@ -94,8 +94,8 @@
                 <div class="col-md-4">
                     <p>Redes Sociales</p>
                     <!-- Añade enlaces o íconos de redes sociales aquí -->
-                    <a href="#" class="social-icon"><img src="../img/facebook.png" width="30px" alt="Facebook"></a>
-                    <a href="#" class="social-icon"><img src="../img/twitter.png" width="30px" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="./img/facebook.png" width="30px" alt="Facebook"></a>
+                    <a href="#" class="social-icon"><img src="./img/twitter.png" width="30px" alt="Twitter"></a>
                     <!-- Añade más redes sociales según sea necesario -->
                 </div>
                 <div class="col-md-4">

@@ -6,23 +6,22 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pomperrier&display=swap">
     <link rel="stylesheet" href="../Bootstrap/css/style_productos.css">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
-    <title>Tu Página</title>
+    <title>Productos</title>
 </head>
 <body>
-
-    <div class="container-fluid">
+<div class="container-fluid">
         <form>
             <section>
             <nav class="navbar navbar-expand-lg navbar-light ">
                 <ul class="navbar-nav ml-auto"class="nav justify-content-end">
                     <li class="nav-item"><img  src="../img/1.png" alt="Imagen 1"></li>
                     <li class="nav-item">"Dulce nectar"</li>
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Productos.html">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Nosotros.html">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link disable" href="Contacto.html" tabindex="-1" aria-disabled="true">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Productos.php">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
                     <li class="nav-item" style="margin-right: auto;"><a href="Contacto.html"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
-                    <li class="nav-item"><a href="#"><img src="../img/a2.png" alt="Imagen 2"></a></li>
+                    <li class="nav-item"><a href="../Usuario/Registro.php"><img src="../img/a2.png" alt="Imagen 2"></a></li>
                     <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
                 </ul>
             </nav>

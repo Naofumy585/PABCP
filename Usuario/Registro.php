@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pomperrier&display=swap">
-        <link rel="stylesheet" href="../Bootstrap/css/style_contacto.css">
-        <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../Bootstrap/css/style_contacto.css">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <title>Registro</title>
 </head>
 <body>
   <div class="container-fluid">
@@ -14,20 +14,20 @@
         <section>
         <nav class="navbar navbar-expand-lg navbar-light ">
             <ul class="navbar-nav ml-auto"class="nav justify-content-end">
-                <li class="nav-item"><img  src="/img/1.png" alt="Imagen 1"></li>
+                <li class="nav-item"><img  src="../img/1.png" alt="Imagen 1"></li>
                 <li class="nav-item">"Dulce nectar"</li>
-                <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="/P_Enlace/Productos.html">Productos</a></li>
-                <li class="nav-item"><a class="nav-link" href="/P_Enlace/Nosotros.html">Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link disable" href="/P_Enlace/Contacto.html" tabindex="-1" aria-disabled="true">Contacto</a></li>
-                <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="/img/diseños/ac.png" alt="Imagen 1"></a></li>
-                <li class="nav-item"><a href="#"><img src="/img/a2.png" alt="Imagen 2"></a></li>
-                <li class="nav-item"><a href="#"><img src="/img/b2.png" alt="Imagen 3"></a></li>
+                <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="../P_Enlace/Productos.php">Productos</a></li>
+                <li class="nav-item"><a class="nav-link" href="../P_Enlace/Nosotros.php">Nosotros</a></li>
+                <li class="nav-item"><a class="nav-link disable" href="../P_Enlace/Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
+                <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
+                <li class="nav-item"><a href="#"><img src="../img/a2.png" alt="Imagen 2"></a></li>
+                <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
             </ul>
         </nav>
     </section>
 
-        <img src="/img/bb/o/p/4.png" alt="Banner" class="banner img-fluid mb-4">
+        <img src="../img/bb/o/p/4.png" alt="Banner" class="banner img-fluid mb-4">
     <section class="vh-80" style="background-color: #e9a91f;">
         <div class="container h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
@@ -89,7 +89,7 @@
                     </div>
                     <div class="col-md-4 d-flex align-items-center order-1 order-lg-2">
       
-                      <img src="/img/1.png"
+                      <img src="../img/1.png"
                         class="img-fluid" alt="Sample image">
       
                     </div>

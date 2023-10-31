@@ -1,5 +1,5 @@
  body {
-        font-family: 'Footlight MT Light', sans-serif;
+         font-family: 'Pomperrier', sans-serif;
             background-color: #e9cd31;
             margin: 0;
             padding: 0;
@@ -9,6 +9,13 @@
         }
         nav .container mb-2{
             background-color: #e9a91f;
+    }
+    section nav {
+        font-family: 'Footlight MT Light', sans-serif;
+        padding: 0%;
+        background-color: #e9a91f;
+        margin: 0%;
+        text-align: center;
     }
 
         nav ul li img{
@@ -40,35 +47,17 @@
 
         h1 {
             text-align: center;
-            font-family: 'Footlight MT Light', sans-serif;
+            font-family: 'Pomperrier', sans-serif;
         }
 
         .ver-mas {
             text-align: center;
         }
-        #Productos .Img-content{
-            display: table;
-            padding-bottom: 20px;
-        }
-        #Productos{
-            
-        }
-        #Productos .Caja{
-            float:inline-start;
-            width: 20%;
-            margin: 20px;
-            background-color: #e9cd31
-        }
-        #Productos .Caja a:hover img{
-            transform: scale(1.1);
-        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-        }
-        div img{
-            background-color: #e9a91f;
         }
 
         table img {
@@ -78,13 +67,6 @@
         section {
             background-color: #e9a91f;
             padding: 20px;
-            text-align: center;
-        }
-        section nav {
-            font-family: 'Footlight MT Light', sans-serif;
-            padding: 0%;
-            background-color: #e9a91f;
-            margin: 0%;
             text-align: center;
         }
         p{
