@@ -28,12 +28,12 @@
         }
         nav  .nav-item {
             list-style-type: none; /* Elimina los puntos de la lista */
-            display: inline-block; /* Muestra los elementos en línea */
+            display:inline-flexbox; /* Muestra los elementos en línea */
             margin-right: 10px; /* Espaciado entre elementos de la lista */
         }
 
         nav ul {
-            list-style-type: none;
+            list-style-type:none;
             display: flex;
         }
 
@@ -71,6 +71,7 @@
         }
         p{
             font-family: 'Footlight MT Light', sans-serif;
+            text-align: justify;
             
         }
         section footer{

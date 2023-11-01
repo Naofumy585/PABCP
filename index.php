@@ -31,26 +31,29 @@
         <form>
             <section>
             <nav class="navbar navbar-expand-lg navbar-light ">
-                <ul class="navbar-nav ml-auto"class="nav justify-content-end">
-                    <li class="nav-item"><img  src="./img/1.png" alt="Imagen 1"></li>
-                    <li class="nav-item">"Dulce nectar"</li>
-                    <li class="nav-item"><a class="nav-link active" href="./index.php">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./P_Enlace/Productos.php">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./P_Enlace/Nosotros.php">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link disable" href="./P_Enlace/Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
-                    <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="./img/diseños/ac.png" alt="Imagen 1"></a></li>
-                    <li class="nav-item">
-                    <?php
-                        if ($correoUsuario == '') {
-                            echo '<a href="login.php"><img src="./img/a2.png" alt="Imagen 2"></a>';
-                        } else {
-                            echo '<p>' . $correoUsuario . '</p>';
-                            echo '<a class="sesion" href="cerrarsesion.php">Cerrar Sesión</a>';
-                        }
-                        ?>
-                    </li>
-                    <li class="nav-item"><a href="#"><img src="./img/b2.png" alt="Imagen 3"></a></li>
-                </ul>
+                <div class="container mb-2">
+                    <ul class="navbar-nav ml-auto"class="nav justify-content-end">
+                        <li class="nav-item"><img  src="./img/1.png" alt="Imagen 1"></li>
+                        <li class="nav-item">"Dulce nectar"</li>
+                        <li class="nav-item"><a class="nav-link active" href="./index.php">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./P_Enlace/Productos.php">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./P_Enlace/Nosotros.php">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link disable" href="./P_Enlace/Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
+                        <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="./img/diseños/ac.png" alt="Imagen 1"></a></li>
+                        <li class="nav-item">
+                        <?php
+                            if ($correoUsuario == '') {
+                                echo '<a href="login.php"><img src="./img/a2.png" alt="Imagen 2"></a>';
+                            } else {
+                                echo '<p>' . $correoUsuario . '</p>';
+                                echo '<a class="sesion" href="cerrarsesion.php">Cerrar Sesión</a>';
+                            }
+                            ?>
+                        </li>
+                        <li class="nav-item"><a href="#"><img src="./img/b2.png" alt="Imagen 3"></a></li>
+                    </ul>
+                </div>
+                
             </nav>
         </section>
 
