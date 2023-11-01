@@ -99,4 +99,9 @@ section nav {
 }
    p{
        font-family: 'Footlight MT Light', sans-serif;
+       text-align: center;
+   }
+   div span{
+    text-align: center;
+   }
    }

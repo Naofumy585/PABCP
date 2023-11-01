@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    if(isset($_SESSION["correoUsuario"])){
+        $correoUsuario= $_SESSION["correoUsuario"];
+        $tipoUsuario= $_SESSION["tipoUsuario"];
+    }
+    else{
+        $correoUsuario= '';
+        $tipoUsuario= '';
+    }  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +18,12 @@
     <link rel="stylesheet" href="../Bootstrap/css/style_productos.css">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
     <title>Productos</title>
+    <style>
+         * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 <div class="container-fluid">
@@ -21,7 +38,16 @@
                     <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
                     <li class="nav-item" style="margin-right: auto;"><a href="Contacto.html"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
-                    <li class="nav-item"><a href="../Usuario/Registro.php"><img src="../img/a2.png" alt="Imagen 2"></a></li>
+                    <li class="nav-item">
+                    <?php
+                        if ($correoUsuario == '') {
+                            echo '<a href="../login.php"><img src="../img/a2.png" alt="Imagen 2"></a>';
+                        } else {
+                            echo '<p>' . $correoUsuario . '</p>';
+                            echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
+                        }
+                        ?>
+                    </li>
                     <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
                 </ul>
             </nav>

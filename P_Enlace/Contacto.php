@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    if(isset($_SESSION["correoUsuario"])){
+        $correoUsuario= $_SESSION["correoUsuario"];
+        $tipoUsuario= $_SESSION["tipoUsuario"];
+    }
+    else{
+        $correoUsuario= '';
+        $tipoUsuario= '';
+    }  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +18,12 @@
     <link rel="stylesheet" href="../Bootstrap/css/style_contacto.css">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
     <title>Nosotros</title>
+    <style>
+         * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -21,7 +38,16 @@
                     <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
                     <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
-                    <li class="nav-item"><a href="../Usuario/Registro.php"><img src="../img/a2.png" alt="Imagen 2"></a></li>
+                    <li class="nav-item">
+                    <?php
+                        if ($correoUsuario == '') {
+                            echo '<a href="../login.php"><img src="../img/a2.png" alt="Imagen 2"></a>';
+                        } else {
+                            echo '<p>' . $correoUsuario . '</p>';
+                            echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
+                        }
+                        ?>
+                    </li>
                     <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
                 </ul>
             </nav>
@@ -40,60 +66,16 @@
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238.7877380372275!2d-93.12351853254094!3d16.746608799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd858a580ecb5%3A0x49c5169d06ab0547!2sCalle%20S%C3%A9ptima%20Poniente-Sur%201057%2C%20San%20Francisco%2C%2029066%20Tuxtla%20Guti%C3%A9rrez%2C%20Chis.!5e0!3m2!1ses!2smx!4v1695314356385!5m2!1ses!2smx">
                                 </iframe>
                             </div>
+                         </td>
+                        <td text-center>
+                        <section>
+                            <img src="../img/bb/o/p/7.png" alt="Banner" class="banner img-fluid mb-4">
+                        </section><br>
                         <p>Teléfono: 9612999608</p>
                         <p>Correo: ejemplo@dominio.com</p>
-                         </td>
+                        </td>
                     <!-- Columna de Inicio de Sesión -->
-                    <td>
-                        <!-- Pills navs -->
-                        <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-                            <li class="nav-item" role="presentation" >
-                                <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="#pills-login" role="tab"
-                                    aria-controls="pills-login" aria-selected="true">Iniciar sesión</a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="/Usuario/Registro.html" role="tab"
-                                    aria-controls="pills-register" aria-selected="true">Registrar</a>
-                            </li>
-                        </ul>
-                        <!-- Pills navs -->
-                        <div class="tab-content">
-                            <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
-                                <form id="login-form">
-                                    <!-- Email input -->
-                                <div class="form-outline mb-4">
-                                    <input type="email" id="loginName" class="form-control" />
-                                    <label class="form-label" for="loginName">Correo</label>
-                                </div>
-                        
-                                <!-- Password input -->
-                                <div class="form-outline mb-4">
-                                <input type="password" id="loginPassword" class="form-control" />
-                                <label class="form-label" for="loginPassword">Password</label>
-                                </div>
-                        
-                                <!-- 2 column grid layout -->
-                                <div class="row mb-4">
-                                <div class="col-md-6 d-flex justify-content-center">
-                                    <!-- Checkbox -->
-                                    <div class="form-check mb-3 mb-md-0">
-                                    <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
-                                    <label class="form-check-label" for="loginCheck"> Guardar? </label>
-                                    </div>
-                                </div>
-                                </div>
-                        
-                                <!-- Submit button -->
-                                <button type="submit" class="btn btn-primary btn-block mb-4">Iniciar sesion</button>
-                        
-                                <!-- Register buttons -->
-                                <div class="text-center">
-                                <p>No estas registrado?? <a href="#pills-register">Registrar</a></p>
-                                </div>
-                                </form>
-                            </div>
-                        </div>
-                    </td>
+                    
                 </tr>
             </table>
             <!-- Sección de redes sociales e información -->
