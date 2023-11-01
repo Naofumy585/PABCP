@@ -33,7 +33,7 @@
                 <ul class="navbar-nav ml-auto"class="nav justify-content-end">
                     <li class="nav-item"><img  src="../img/1.png" alt="Imagen 1"></li>
                     <li class="nav-item">"Dulce nectar"</li>
-                    <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="Productos.php">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
