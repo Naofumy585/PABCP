@@ -37,8 +37,16 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ml-auto nav justify-content-end">
                                 <li class="nav-item"><img src="../img/1.png" alt="Imagen 1"></li>
-                                <li class="nav-item">"Dulce nectar"</li>
+                                <p class="nav-item">"Dulce nectar"</p>
                                 <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
+                                <?php
+                                    if(($correoUsuario!='') && $tipoUsuario==1)
+                                    {
+                                    echo '<li class="nav-item"><a class="nav-link" href="Catalogo.php">Catalago</a></li>';
+                                    echo '<li class="nav-item"><a class="nav-link" href="pedidos.php">Pedidos</a></li>';
+                                    echo '<li class="nav-item"><a class="nav-link" href="../Usuario/administrarusuarios.php">Usuarios</a></li>';
+                                    }
+                                ?>
                                 <li class="nav-item"><a class="nav-link" href="Productos.php">Productos</a></li>
                                 <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
                                 <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>

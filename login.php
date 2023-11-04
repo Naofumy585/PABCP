@@ -7,6 +7,7 @@
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./Bootstrap/css/style_index.css">
     <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Bootstrap/js/bootstrap.min.js">
     <style>
          * {
             padding: 0;

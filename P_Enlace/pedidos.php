@@ -14,21 +14,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pomperrier&display=swap">
-    <link rel="stylesheet" href="../Bootstrap/css/style_contacto.css">
+    <title>Mi portafolio</title>
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
-    <title>Nosotros</title>
-    <style>
-         * {
-            padding: 0;
-            margin: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="../Bootstrap/css/style_productos.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <form>
-            <section>
+    <header>
+    <section>
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,7 +50,7 @@
                                             echo '<a href="../login.php"><img src="../img/a2.png" alt="Imagen 2"></a>';
                                         } else {
                                             echo '<p>' . $correoUsuario . '</p>';
-                                            echo '<a class="sesion" href="../cerrarsesion.php">Cerrar Sesión</a>';
+                                            echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
                                         }
                                     ?>
                                 </li>
@@ -67,34 +60,9 @@
                     </div>
                 </nav>
             </section>
-
-            <img src="../img/bb/o/p/4.png" alt="Banner" class="banner img-fluid mb-4">
-
-            <table>
-                <tr>
-                       <!-- Columna de Datos de Contacto -->
-                        <td>
-                        <img src="../img/1.png" alt="kdkad">
-                        <div id="mapa" >
-                            <p><b>Direccion:</b></p>
-                            <h6>Blvd. Belisario Domínguez 3329, Sin Nombre, 29020 Tuxtla Gutiérrez, Chis</h6>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d238.7877380372275!2d-93.12351853254094!3d16.746608799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ecd858a580ecb5%3A0x49c5169d06ab0547!2sCalle%20S%C3%A9ptima%20Poniente-Sur%201057%2C%20San%20Francisco%2C%2029066%20Tuxtla%20Guti%C3%A9rrez%2C%20Chis.!5e0!3m2!1ses!2smx!4v1695314356385!5m2!1ses!2smx">
-                                </iframe>
-                            </div>
-                         </td>
-                        <td text-center>
-                        <section>
-                            <img src="../img/bb/o/p/7.png" alt="Banner" class="banner img-fluid mb-4">
-                        </section><br>
-                        <p>Teléfono: 9612999608</p>
-                        <p>Correo: ejemplo@dominio.com</p>
-                        </td>
-                    <!-- Columna de Inicio de Sesión -->
-                    
-                </tr>
-            </table>
-            <!-- Sección de redes sociales e información -->
-            <section id="Pie_p" class="row">
+   </header>
+  
+   <section class="row">
                 <div class="col-md-4">
                     <p>Hipertextos</p>
                     <a class="card-title mb-4 text-muted" href="#">Enlace 1</a>
@@ -115,41 +83,12 @@
                     <p>Correo: ejemplo@dominio.com</p>
                     <!-- Añade más información de contacto según sea necesario -->
                 </div>
-                <footer>
+                <tr height="100px"><!--Pie de pagina-->
                     <td colspan="2">
-                        <h3>Liceciatura en Sistemas computacionales</h3>
-                        <p> &copy;Derechos reservados a la abeja chiapaneca</p>
+                        <h4>Licenciatura en Sistemas computacionales</h4>
+                        <p>&copy; Copyright 2023.  5°J</p>
                     </td>
-                </footer>
+                </tr>
             </section>
-        </form>
-    </div>
-    <!-- Agrega la referencia al script de Bootstrap al final del body -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    // Obtén referencias a los formularios
-    var loginForm = document.getElementById('login-form');
-    var registerForm = document.getElementById('register-form');
-
-    // Agrega un event listener a la pestaña de inicio de sesión
-    document.getElementById('tab-login').addEventListener('click', function () {
-      // Muestra el formulario de inicio de sesión
-      loginForm.style.display = 'block';
-      // Oculta el formulario de registro
-      registerForm.style.display = 'none';
-    });
-
-    // Agrega un event listener a la pestaña de registro
-    document.getElementById('tab-register').addEventListener('click', function () {
-      // Muestra el formulario de registro
-      registerForm.style.display = 'block';
-      // Oculta el formulario de inicio de sesión
-      loginForm.style.display = 'none';
-    });
-  });
-    </script>
 </body>
 </html>
