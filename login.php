@@ -61,7 +61,7 @@
                     <input class="btn btn-dark btn-lg btn-block" 
                     type="submit" value="Entrar">
                   </div>
-                    <a href="./usuario/registrarusuario.php"
+                    <a href="./Usuario/registrarusuario.php"
                       ">Registrate aquí</a>
               </div>
             </div>

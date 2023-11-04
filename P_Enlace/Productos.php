@@ -29,27 +29,34 @@
 <div class="container-fluid">
         <form>
             <section>
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <ul class="navbar-nav ml-auto"class="nav justify-content-end">
-                    <li class="nav-item"><img  src="../img/1.png" alt="Imagen 1"></li>
-                    <li class="nav-item">"Dulce nectar"</li>
-                    <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Productos.php">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
-                    <li class="nav-item" style="margin-right: auto;"><a href="Contacto.html"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
-                    <li class="nav-item">
-                    <?php
-                        if ($correoUsuario == '') {
-                            echo '<a href="../login.php"><img src="../img/a2.png" alt="Imagen 2"></a>';
-                        } else {
-                            echo '<p>' . $correoUsuario . '</p>';
-                            echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
-                        }
-                        ?>
-                    </li>
-                    <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto nav justify-content-end">
+                            <li class="nav-item"><img src="../img/1.png" alt="Imagen 1"></li>
+                            <li class="nav-item">"Dulce nectar"</li>
+                            <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Productos.php">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
+                            <li class="nav-item" style="margin-right: auto;"><a href="Contacto.html"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
+                            <li class="nav-item">
+                                <?php
+                                    if ($correoUsuario == '') {
+                                        echo '<a href="../login.php"><img src="../img/a2.png" alt="Imagen 2"></a>';
+                                    } else {
+                                        echo '<p>' . $correoUsuario . '</p>';
+                                        echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
+                                    }
+                                ?>
+                            </li>
+                            <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
             </section>
 

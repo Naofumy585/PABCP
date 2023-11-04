@@ -29,67 +29,75 @@
     <div class="container-fluid">
         <form>
             <section>
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <ul class="navbar-nav ml-auto"class="nav justify-content-end">
-                    <li class="nav-item"><img  src="../img/1.png" alt="Imagen 1"></li>
-                    <li class="nav-item">"Dulce nectar"</li>
-                    <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Productos.php">Productos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
-                    <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
-                    <li class="nav-item">
-                    <?php
-                        if ($correoUsuario == '') {
-                            echo '<a href="../login.php"><img src="../img/a2.png" alt="Imagen 2"></a>';
-                        } else {
-                            echo '<p>' . $correoUsuario . '</p>';
-                            echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
-                        }
-                        ?>
-                    </li>
-                    <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
-                </ul>
-            </nav>
-        </section>
-
-            <img src="../img/bb/o/p/4.png" alt="Banner" class="banner img-fluid mb-4">
-
-            <div>
-                <!-- Aquí colocamos el banner y el texto encima -->
-                <div class="position-relative">
-                    <img src="../img/bb/o/p/5.png" alt="Tu Banner" class="img-fluid mb-4">
-                    <div class="text-over-banner">
-                        <p><b>Vision</b></p>
-                        <p>Nuestra misión es ofrecer a nuestros
-                            clientes la miel de la más alta calidad, producida
-                             de manera sostenible y responsable. Nos esforzamos
-                              por ser líderes en la industria apicola, promoviendo
-                               la preservación de las abejas y sus hábitats, al 
-                               tiempo que brindamos productos excepcionales que
-                                satisfacen los paladares más exigentes. Estamos 
-                                comprometidos con la excelencia en cada paso de 
-                                nuestro proceso de producción
-                            y en proporcionar a nuestros clientes una experiencia
-                             única y saludable a través de nuestros productos de miel.</p>
-                    </div>
-                </div>
-                <div >
-                    <!-- Aquí colocamos el banner y el texto encima -->
-                    <div class="position-relative">
-                        <img src="../img/bb/o/p/6.png" alt="Tu Banner" class="img-fluid mb-4">
-                        <div class="Caja2">
-                            <p><b>Visión </b></p>
-                            <p>Nuestra visión es convertirnos en líderes reconocidos a nivel
-                                 mundial en la producción y comercialización de miel de alta
-                                  calidad. Nos esforzamos por ser una empresa innovadora que
-                                   utiliza prácticas sostenibles para apoyar a las abejas y a
-                                    sus ecosistemas. Buscamos expandir nuestra presencia
-                                 en los mercados internacionales, promoviendo la apreciación 
-                                 de la miel como un producto natural y saludable.</p>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto nav justify-content-end">
+                                <li class="nav-item"><img src="../img/1.png" alt="Imagen 1"></li>
+                                <li class="nav-item">"Dulce nectar"</li>
+                                <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Productos.php">Productos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="Nosotros.php">Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link disable" href="Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
+                                <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="../img/diseños/ac.png" alt="Imagen 1"></a></li>
+                                <li class="nav-item">
+                                    <?php
+                                        if ($correoUsuario == '') {
+                                            echo '<a href="../login.php"><img src="../img/a2.png" alt="Imagen 2"></a>';
+                                        } else {
+                                            echo '<p>' . $correoUsuario . '</p>';
+                                            echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
+                                        }
+                                    ?>
+                                </li>
+                                <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
+                            </ul>
                         </div>
                     </div>
-            </div>
+                </nav>
+            </section>
+
+            <img src="../img/bb/o/p/4.png" alt="Banner" class="banner img-fluid mb-4">
+           <div>
+    <!-- Aquí colocamos el banner y el texto encima -->
+    <div class="position-relative">
+        <img src="../img/bb/o/p/5.png" alt="Tu Banner" class="img-fluid mb-4">
+        <div class="text-over-banner">
+            <p><b>Mision</b></p>
+            <p>Nuestra misión es ofrecer a nuestros
+                clientes la miel de la más alta calidad, producida
+                de manera sostenible y responsable. Nos esforzamos
+                por ser líderes en la industria apícola, promoviendo
+                la preservación de las abejas y sus hábitats, al
+                tiempo que brindamos productos excepcionales que
+                satisfacen los paladares más exigentes. Estamos
+                comprometidos con la excelencia en cada paso de
+                nuestro proceso de producción
+                y en proporcionar a nuestros clientes una experiencia
+                única y saludable a través de nuestros productos de miel.</p>
+        </div>
+    </div>
+</div>
+<div>
+    <!-- Aquí colocamos el banner y el texto encima -->
+    <div class="position-relative">
+        <img src="../img/bb/o/p/6.png" alt="Tu Banner" class="img-fluid mb-4">
+        <div class="Caja2">
+            <p><b>Visión</b></p>
+            <p>Nuestra visión es convertirnos en líderes reconocidos a nivel
+                mundial en la producción y comercialización de miel de alta
+                calidad. Nos esforzamos por ser una empresa innovadora que
+                utiliza prácticas sostenibles para apoyar a las abejas y a
+                sus ecosistemas. Buscamos expandir nuestra presencia
+                en los mercados internacionales, promoviendo la apreciación
+                de la miel como un producto natural y saludable.</p>
+        </div>
+    </div>
+</div>
+
             <h1>Fotos</h1>
             <section>
                 <img src="../img/bb/o/p/7.png" alt="Banner" class="banner img-fluid mb-4">

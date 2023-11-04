@@ -7,7 +7,6 @@ include_once "../Core/Usuario.php";
 $usuario=new Usuario();
 $respuesta=$usuario->InsertarUsuario($nombre,$correo,md5($password),2);
 if($respuesta==true){
-    echo "<script>alert('Registro Exitoso');</script>";
     header("Location: ../login.php");
 }
 }

@@ -1,13 +1,12 @@
 <?php
     session_start();
     if(isset($_SESSION["correoUsuario"])){
-        $correoUsuario= $_SESSION["correoUsuario"];
-        $tipoUsuario= $_SESSION["tipoUsuario"];
+        $correoUsuario = $_SESSION["correoUsuario"];
+        $tipoUsuario = $_SESSION["tipoUsuario"];
+    } else {
+        $correoUsuario = '';
+        $tipoUsuario = '';
     }
-    else{
-        $correoUsuario= '';
-        $tipoUsuario= '';
-    }  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,32 +29,36 @@
     <div class="container-fluid">
         <form>
             <section>
-            <nav class="navbar navbar-expand-lg navbar-light ">
-                <div class="container mb-2">
-                    <ul class="navbar-nav ml-auto"class="nav justify-content-end">
-                        <li class="nav-item"><img  src="./img/1.png" alt="Imagen 1"></li>
-                        <li class="nav-item">"Dulce nectar"</li>
-                        <li class="nav-item"><a class="nav-link active" href="./index.php">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./P_Enlace/Productos.php">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./P_Enlace/Nosotros.php">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link disable" href="./P_Enlace/Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
-                        <li class="nav-item" style="margin-right: auto;"><a href="#"><img src="./img/diseños/ac.png" alt="Imagen 1"></a></li>
-                        <li class="nav-item">
-                        <?php
-                            if ($correoUsuario == '') {
-                                echo '<a href="login.php"><img src="./img/a2.png" alt="Imagen 2"></a>';
-                            } else {
-                                echo '<p>' . $correoUsuario . '</p>';
-                                echo '<a class="sesion" href="cerrarsesion.php">Cerrar Sesión</a>';
-                            }
-                            ?>
-                        </li>
-                        <li class="nav-item"><a href="#"><img src="./img/b2.png" alt="Imagen 3"></a></li>
-                    </ul>
-                </div>
-                
-            </nav>
-        </section>
+               <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container mb-2">
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav ml-auto nav justify-content-end">
+                                    <li class="nav-item"><img src="./img/1.png" alt="Imagen 1"></li>
+                                    <li class="nav-item">"Dulce nectar"</li>
+                                    <li class="nav-item"><a class="nav-link active" href="./index.php">Inicio</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="./P_Enlace/Productos.php">Productos</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="./P_Enlace/Nosotros.php">Nosotros</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="./P_Enlace/Contacto.php">Contacto</a></li>
+                                    <li class="nav-item"><a href="#"><img src="./img/diseños/ac.png" alt="Imagen 1"></a></li>
+                                    <li class="nav-item">
+                                        <?php
+                                            if ($correoUsuario == '') {
+                                                echo '<a href="login.php"><img src="./img/a2.png" alt="Imagen 2"></a>';
+                                            } else {
+                                                echo '<p>' . $correoUsuario . '</p>';
+                                                echo '<a class="sesion" href="cerrarsesion.php">Cerrar Sesión</a>';
+                                            }
+                                        ?>
+                                    </li>
+                                    <li class="nav-item"><a href="#"><img src="./img/b2.png" alt="Imagen 3"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                </nav>
+            </section>
 
             <img src="./img/q/1.jpg" alt="Banner" class="banner img-fluid mb-4">
 
@@ -65,24 +68,25 @@
                 <h1 class="text-center">Promoción del Mes</h1>
             
                 <!-- Div con las imágenes de la promocióOn -->
-                <div class="row " >
-                    <div class="col-md-3">
-                        <img src="./img/descarga.jpg" alt="Promoción 1" class="img-fluid mb-2">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="./img/descarga (1).jpg" alt="Promoción 2" class="img-fluid mb-2">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="./img/descarga (2).jpg" alt="Promoción 3" class="img-fluid mb-2">
-                    </div>
-                    <div class="col-md-3">
-                        <img src="./img/PROMOCION-1.2-kilos-miel-de-abeja-Panal-Real.jpg" alt="Promoción 4" class="img-fluid mb-2">
+                   <div class="row text-center">
+                        <div class="col-md-3 col-12 mb-2">
+                            <img src="./img/descarga.jpg" alt="Promoción 1" class="img-fluid mx-auto">
+                        </div>
+                        <div class="col-md-3 col-12 mb-2">
+                            <img src="./img/descarga (1).jpg" alt="Promoción 2" class="img-fluid mx-auto">
+                        </div>
+                        <div class="col-md-3 col-12 mb-2">
+                            <img src="./img/descarga (2).jpg" alt="Promoción 3" class="img-fluid mx-auto">
+                        </div>
+                        <div class="col-md-3 col-12 mb-2">
+                            <img src="./img/PROMOCION-1.2-kilos-miel-de-abeja-Panal-Real.jpg" alt="Promoción 4" class="img-fluid mx-auto">
+                        </div>
                     </div>
                 </div>
             
             </div>
             <div class="ver-mas" class="col-md-4">
-                <input type="button" class="btn btn-primary btn-block" style="background-color: rgb(218, 199, 35);" value="Ver más productos" onclick="window.location.href='productos.html';">
+                <input type="button" class="btn btn-primary btn-block" style="background-color: rgb(218, 199, 35);" value="Ver más productos" onclick="window.location.href='./P_Enlace/productos.php';">
             </div>
 
             <h1 class="text-center">Nuestras Colecciones</h1>
