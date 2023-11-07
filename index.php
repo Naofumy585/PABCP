@@ -31,43 +31,43 @@
     <div class="container-fluid">
         <form>
             <section>
-            <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container mb-2">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto nav justify-content-end">
-                <li class="nav-item"><img src="./img/1.png" alt="Imagen 1"></li>
-                <p class="nav-item">"Dulce nectar"</p>
-                <li class="nav-item"><a class="nav-link active" href="index.php">Inicio</a></li>
-                <?php
-                    if(($correoUsuario!='') && $tipoUsuario==1)
-                    {
-                       echo '<li class="nav-item"><a class="nav-link" href="P_Enlace/Catalogo.php">Catalago</a></li>';
-                       echo '<li class="nav-item"><a class="nav-link" href="P_Enlace/pedidos.php">Pedidos</a></li>';
-                       echo '<li class="nav-item"><a class="nav-link" href="Usuario/administrarusuarios.php">Usuarios</a></li>';
-                    }
-                ?>
-                <li class="nav-item"><a class="nav-link" href="./P_Enlace/Productos.php">Productos</a></li>
-                <li class="nav-item"><a class="nav-link" href="./P_Enlace/Nosotros.php">Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link" href="./P_Enlace/Contacto.php">Contacto</a></li>
-                <li class="nav-item"><a href="#"><img src="./img/diseños/ac.png" alt="Imagen 1"></a></li>
-                <li class="nav-item">
-                    <?php
-                    if ($correoUsuario == '') {
-                        echo '<a href="login.php"><img src="./img/a2.png" alt="Imagen 2"></a>';
-                    } else {
-                        echo '<p>' . $correoUsuario . '</p>';
-                        echo '<a class="sesion" href="cerrarsesion.php">Cerrar Sesión</a>';
-                    }
-                    ?>
-                </li>
-                <li class="nav-item"><a href="#"><img src="./img/b2.png" alt="Imagen 3"></a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container mb-2">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto nav justify-content-end">
+                                <li class="nav-item"><img src="./img/1.png" alt="Imagen 1"></li>
+                                <p class="nav-item">"Dulce nectar"</p>
+                                <li class="nav-item"><a class="nav-link active" href="index.php">Inicio</a></li>
+                                <?php
+                                    if(($correoUsuario!='') && $tipoUsuario==1)
+                                    {
+                                    echo '<li class="nav-item"><a class="nav-link" href="P_Enlace/Catalogo.php">Catalago</a></li>';
+                                    echo '<li class="nav-item"><a class="nav-link" href="P_Enlace/pedidos.php">Pedidos</a></li>';
+                                    echo '<li class="nav-item"><a class="nav-link" href="Usuario/administrarusuarios.php">Usuarios</a></li>';
+                                    }
+                                ?>
+                                <li class="nav-item"><a class="nav-link" href="./P_Enlace/Productos.php">Productos</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./P_Enlace/Nosotros.php">Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./P_Enlace/Contacto.php">Contacto</a></li>
+                                <li class="nav-item"><a href="#"><img src="./img/diseños/ac.png" alt="Imagen 1"></a></li>
+                                <li class="nav-item">
+                                    <?php
+                                    if ($correoUsuario == '') {
+                                        echo '<a href="login.php"><img src="./img/a2.png" alt="Imagen 2"></a>';
+                                    } else {
+                                        echo '<p>' . $correoUsuario . '</p>';
+                                        echo '<a class="sesion" href="cerrarsesion.php">Cerrar Sesión</a>';
+                                    }
+                                    ?>
+                                </li>
+                                <li class="nav-item"><a href="#"><img src="./img/b2.png" alt="Imagen 3"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
             </section>
 
             <img src="./img/q/1.jpg" alt="Banner" class="banner img-fluid mb-4">

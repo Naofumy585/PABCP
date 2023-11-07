@@ -2,8 +2,8 @@
     $id=$_GET['id'];
     include_once '../Core/Usuario.php';
     $user=new Usuario();
-    $resultado=$user->EliminarUsuario($id);
+    $resultado=$user->EliminarP($id);
     if($resultado==true){
-        header("Location: administrarusuarios.php");
+        header("Location: ../P_Enlace/Catalogo.php");
     }
 ?>

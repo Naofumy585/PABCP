@@ -94,38 +94,58 @@
             </div>
             <h1 class="text-center">Productos</h1>
             <!-- Tabla con espacio para 4 imágenes -->
-            <section id="Productos">
-            <div class="Img-content" class="row">
-                <div class="Caja" class="col-md-3">
-                    <img src="../img/bb/1.png" alt="Producto 1" class="img-fluid">
-                    <p>Miel de abeja Chabtic 100%</p>
-                    <p>400g</p>
-                    <p>Precio: 700MXN</p>
-                </div>
-                <div class="Caja" class="col-md-3">
-                    <img src="../img/bb/2.png" alt="Producto 2" class="img-fluid">
-                    <p>Nbf Miel de Abeja pura con panal</p>
-                    <p>Comestible organica 454gr</p>
-                    <p>Precio: 900MXN</p>
-                </div>
-                <div class="Caja" class="col-md-3">
-                    <img src="../img/bb/3.png" alt="Producto 3" class="img-fluid">
-                    <p>Miel de abeja carlota</p>
-                    <p>300g</p>
-                    <p>Precio: 60MXN</p>
-                </div>
-                <div class="Caja" class="col-md-3">
-                    <img src="../img/bb/4.png" alt="Producto 4" class="img-fluid">
-                    <p>Miel Selecta</p>
-                    <p>Precio: 324MXN</p>
-                </div>
-               
-            </div>
-        </section><br>
+            <section id="Portafolio">
+                <a href="../Productos/AñadirP.php" class="btn btn-primary">Nuevo Producto</a>
+                <div>
+                    <table class="table table-light">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre</th>
+                                <th>Modelo</th>
+                                <th>Precio</th>
+                                <th>Imagen</th>
+                                <th>Descripción</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                            include_once '../Core/Usuario.php';
+                            $usuario = new Usuario();
+                            $productos = $usuario->ObtenerProductos();
 
-            <div class="ver-mas" class="col-md-4">
-                <input type="button" class="btn btn-primary btn-block" style="background-color: rgb(218, 199, 35);" value="Ver más productos" onclick="window.location.href='/PABCP-main/P_Enlace/Productos.html';">
-            </div><br>
+                            foreach ($productos as $producto) {
+                                echo '<tr>';
+                                
+                                // Verifica si el índice 'id' existe y si no, muestra un mensaje alternativo
+                                echo '<td>' . (isset($producto['id']) ? $producto['id'] : 'Desconocido') . '</td>';
+                                
+                                echo '<td>' . (isset($producto['Nombre']) ? $producto['Nombre'] : 'Desconocido') . '</td>';
+                                echo '<td>' . (isset($producto['modelo']) ? $producto['modelo'] : 'Desconocido') . '</td>';
+                                echo '<td>' . (isset($producto['precio']) ? $producto['precio'] : 'Desconocido') . '</td>';
+                                echo '<td>' . (isset($producto['Descripcion']) ? $producto['Descripcion'] : 'Desconocido') . '</td>';
+                                echo '<td>' . (isset($producto['img']) ? '<img src="' . $producto['img'] . '" alt="Imagen del producto"/>' : 'Desconocido') . '</td>';
+
+                                // Verifica si el índice 'id' existe antes de crear los enlaces
+                                if (isset($producto['id'])) {
+                                    echo '<td><a href="../Productos/eliminarproducto.php?id=' . $producto['id'] . '"><img src="../img/Eliminar.png" alt="Eliminar"/></a></td>';
+                                    echo '<td><a href="../Productos/editarproducto.php?id=' . $producto['id'] . '"><img src="../img/Editar.png" alt="Editar"/></a></td>';
+                                } else {
+                                    // Si 'id' no existe, muestra celdas vacías
+                                    echo '<td></td>';
+                                    echo '<td></td>';
+                                }
+                                
+                                echo '</tr>';
+                            }
+                            ?>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
             <!-- Sección de redes sociales e información -->
             <section class="row">

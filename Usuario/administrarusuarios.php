@@ -37,7 +37,7 @@
                                             <?php
                                                 if(($correoUsuario!='') && $tipoUsuario==1)
                                                 {
-                                                echo '<li class="nav-item" ><a class="nav-link" href="../P_Enlace/Catalago.php"">Catalago</a></li>';
+                                                echo '<li class="nav-item" ><a class="nav-link" href="../P_Enlace/Catalogo.php"">Catalago</a></li>';
                                                 echo '<li class="nav-item" ><a class="nav-link" href="../P_Enlace/pedidos.php">Pedidos</a></li>';
                                                 echo '<li class="nav-item" ><a class="nav-link" href="../Usuario/administrarusuarios.php">Usuarios</a></li>';
                                                 }

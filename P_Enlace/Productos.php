@@ -96,28 +96,36 @@
             <!-- Tabla con espacio para 4 imágenes -->
             <section id="Productos">
             <div class="Img-content" class="row">
-                <div class="Caja" class="col-md-3">
-                    <img src="../img/bb/1.png" alt="Producto 1" class="img-fluid">
-                    <p>Miel de abeja Chabtic 100%</p>
-                    <p>400g</p>
-                    <p>Precio: 700MXN</p>
-                </div>
-                <div class="Caja" class="col-md-3">
-                    <img src="../img/bb/2.png" alt="Producto 2" class="img-fluid">
-                    <p>Nbf Miel de Abeja pura con panal</p>
-                    <p>Comestible organica 454gr</p>
-                    <p>Precio: 900MXN</p>
-                </div>
-                <div class="Caja" class="col-md-3">
-                    <img src="../img/bb/3.png" alt="Producto 3" class="img-fluid">
-                    <p>Miel de abeja carlota</p>
-                    <p>300g</p>
-                    <p>Precio: 60MXN</p>
-                </div>
-                <div class="Caja" class="col-md-3">
-                    <img src="../img/bb/4.png" alt="Producto 4" class="img-fluid">
-                    <p>Miel Selecta</p>
-                    <p>Precio: 324MXN</p>
+                <div class="Caja" class="producto">
+                <?php
+                    // Aquí deberías incluir tu función CatalagoP()
+                    include_once '../Core/Usuario.php';
+                    $user=new Usuario();
+                    $productos = $user-> CatalagoP();
+
+                    // Verifica si hay productos para mostrar
+                    if (!empty($productos)) {
+                        echo '<table>';
+                        echo '<tr>';
+                        
+                        // Itera sobre los productos y crea las celdas de la tabla
+                        foreach ($productos as $producto) {
+                            echo '<td>';
+                            echo '<div class="producto-item">';
+                            echo '<img src="' . $producto['Img'] . '" alt="' . $producto['Nombre'] . '">';
+                            echo '<p>' . $producto['Nombre'] . '</p>';
+                            echo '<p>' . $producto['modelo'] . '</p>';
+                            echo '<p>$' . $producto['precio'] . '</p>';
+                            echo '</div>';
+                            echo '</td>';
+                        }
+
+                        echo '</tr>';
+                        echo '</table>';
+                    } else {
+                        echo '<p>No hay productos disponibles.</p>';
+                    }
+                ?>
                 </div>
                
             </div>
