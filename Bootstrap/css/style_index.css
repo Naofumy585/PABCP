@@ -34,7 +34,7 @@ nav ul li:hover {
 
 nav .nav-item {
     list-style-type: none;
-    display: inline-flexbox;
+    display:inline-block;
     margin-right: 6px;
 }
 
