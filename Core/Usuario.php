@@ -6,7 +6,7 @@
         public function AutenticarUsuario($correo,$password){
             include '../conexion.php';
             $conectar= new Conexion();
-            $consulta=$conectar->prepare("SELECT * FROM t_usuarios2
+            $consulta=$conectar->prepare("SELECT * FROM t_usuarios
             WHERE CorreoElectronico=:correo AND Password=:password");
             $consulta->bindParam(":correo",$correo,PDO::PARAM_STR);
             $consulta->bindParam(":password",$password,PDO::PARAM_STR);
@@ -18,7 +18,7 @@
             include '../conexion.php';
             $conectar= new Conexion();
             $consulta=$conectar->prepare("INSERT INTO 
-            t_usuarios2(NombreCompleto,CorreoElectronico,Password,
+            t_usuarios(NombreCompleto,CorreoElectronico,Password,
             Tipo,FechaRegistro) VALUES(:nombreCompleto,:correo,
             :password,:tipo,NOW())");
             $consulta->bindParam(":nombreCompleto",$nombreCompleto,PDO::PARAM_STR);
@@ -31,7 +31,7 @@
         public function ModificarUsuario($id,$nombreCompleto,$correo){
             include '../conexion.php';
             $conectar= new Conexion();
-            $consulta=$conectar->prepare("UPDATE t_usuarios2
+            $consulta=$conectar->prepare("UPDATE t_usuarios
             SET NombreCompleto=:nombreCompleto,Correo=:correo
             WHERE Id=:id");
             $consulta->bindParam(":nombreCompleto",$nombreCompleto,PDO::PARAM_STR);
@@ -43,7 +43,7 @@
         public function EliminarUsuario($id){
             include '../conexion.php';
             $conectar= new Conexion();
-            $consulta=$conectar->prepare("DELETE FROM t_usuarios2
+            $consulta=$conectar->prepare("DELETE FROM t_usuarios
             WHERE Id=:id");
             $consulta->bindParam(":id",$id,PDO::PARAM_INT);
             $consulta->execute();
@@ -52,7 +52,7 @@
         public function ObtenerUsuarios(){
             include '../conexion.php';
             $conectar= new Conexion();
-            $consulta=$conectar->prepare('SELECT * FROM t_usuarios2');
+            $consulta=$conectar->prepare('SELECT * FROM t_usuarios');
             $consulta->execute();
             $consulta->setFetchMode(PDO::FETCH_ASSOC);
             return $consulta->fetchAll();
@@ -61,7 +61,7 @@
         public function CatalagoP(){
             include '../conexion.php';
             $conectar= new Conexion();
-            $consulta=$conectar->prepare('SELECT  * FROM t_productos2');
+            $consulta=$conectar->prepare('SELECT  * FROM t_productos');
             $consulta->execute();
             $consulta->setFetchMode(PDO::FETCH_ASSOC);
             return $consulta->fetchAll();
@@ -70,7 +70,7 @@
             include '../conexion.php';
             $conectar = new Conexion();
             
-            $consulta = $conectar->prepare("INSERT INTO t_productos2 (Nombre, modelo, precio, Img) 
+            $consulta = $conectar->prepare("INSERT INTO t_productos (Nombre, modelo, precio, Img) 
                                             VALUES (:nombre, :modelo, :precio, :img)");
             
             $consulta->bindParam(":nombre", $nombre, PDO::PARAM_STR);
@@ -84,7 +84,7 @@
             include '../conexion.php';
             $conectar = new Conexion();
         
-            $consulta = $conectar->prepare("SELECT * FROM t_productos2");
+            $consulta = $conectar->prepare("SELECT * FROM t_productos");
             $consulta->execute();
             $consulta->setFetchMode(PDO::FETCH_ASSOC);
             return $consulta->fetchAll();
@@ -94,7 +94,7 @@
             include '../conexion.php';
             $conectar = new Conexion();
             
-            $consulta = $conectar->prepare("UPDATE t_productos2 
+            $consulta = $conectar->prepare("UPDATE t_productos
                                             SET Nombre = :nombre, 
                                                 modelo = :modelo, 
                                                 precio = :precio, 
@@ -114,7 +114,7 @@
         public function EliminarP($id){
             include '../conexion.php';
             $conectar= new Conexion();
-            $consulta=$conectar->prepare("DELETE FROM t_productos2
+            $consulta=$conectar->prepare("DELETE FROM t_productos
             WHERE Id=:id");
             $consulta->bindParam(":id",$id,PDO::PARAM_INT);
             $consulta->execute();
