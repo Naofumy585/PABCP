@@ -53,8 +53,13 @@
                                             echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
                                         }
                                     ?>
+                                    <?php
+                                    if(($correoUsuario!='') && $tipoUsuario==2)
+                                    {
+                                    echo '<li class="nav-item"><a href="Productos/Carrito.php"><img src=../"img/b2.png" alt="Imagen 3"></a></li>';
+                                     }
+                                ?>
                                 </li>
-                                <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -90,5 +95,8 @@
                     </td>
                 </tr>
             </section>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

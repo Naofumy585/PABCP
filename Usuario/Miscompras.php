@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi portafolio</title>
+    <title>Compras</title>
     <link rel="stylesheet" href="../Bootstrap/css/style_productos.css">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../Bootstrap/js/bootstrap.min.js">
@@ -22,7 +22,7 @@
 <body>
     <header>
         <!--Menu-->
-    <section>
+        <section>
                <nav class="navbar navbar-expand-lg navbar-light">
                         <div class="container mb-2">
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,12 +34,12 @@
                                         <li class="nav-item"><img src="../img/1.png" alt="Imagen 1"></li>
                                         <p class="nav-item">"Dulce nectar"</p>
                                         <li class="nav-item"><a class="nav-link active" href="../index.php">Inicio</a></li>
-                                        <?php
+                                            <?php
                                                 if(($correoUsuario!='') && $tipoUsuario==1)
                                                 {
-                                                echo '<li class="nav-item" ><a class="nav-link" href="../P_Enlace/Catalago.php"">Catalago</a></li>';
-                                                echo '<li class="nav-item" ><a class="nav-link" href="../P_Enlace/pedidos.php">Pedidos</a></li>';
-                                                echo '<li class="nav-item" ><a class="nav-link" href="../Usuario/administrarusuarios.php">Usuarios</a></li>';
+                                                echo '<li class="nav-item" ><a class="nav-link" href="../P_Enlace/Catalogo.php"">Catalago</a></li>';
+                                                echo '<li class="nav-item"><a class="nav-link" href="../Productos/administrarP.php">Pedidos</a></li>';
+                                                echo '<li class="nav-item" ><a class="nav-link" href="administrarusuarios.php">Usuarios</a></li>';
                                                 }
                                             ?>
                                         <li class="nav-item"><a class="nav-link" href="../P_Enlace/Productos.php">Productos</a></li>
@@ -56,47 +56,69 @@
                                                 }
                                             ?>
                                         </li>
-                                        <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
+                                        <?php
+                                            if(($correoUsuario!='') && $tipoUsuario==2)
+                                            {
+                                            echo '<li class="nav-item"><a class="nav-link" href="../Productos/Carrito.php"><img src="../img/b2.png" alt="Imagen 3"></a></li>';
+                                            echo '<li class="nav-item"><a class="nav-link" href="../Usuario/Miscompras.php">Mis Compras</a></li>';
+                                            }
+                                        ?>
                                     </ul>
                                 </div>
                             </nav>
                         </div>
                 </nav>
-            </section>
    </header>
   
    <section id="Portafolio">
-   <form action="guardarusuario.php" method="POST">
+        <div>
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>id_usuario</th>
+                        <th>Fecha del Pedido</th>
+                        <th></th>
+                        <th></th>
+                    <tr>
+                </thead>
+                <tbody>
+                <?php
+                    include_once '../Core/FProductos.php';
 
-<h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Ingresa con tu cuenta</h5>
-<div class="form-outline mb-4">
-  <input type="text" id="form2Example17" class="form-control form-control-lg" name="nombre" />
-  <label class="form-label" for="form2Example17">Nombre completo</label>
-</div>
+                    // Verifica si el usuario está autenticado
+                    if (isset($_SESSION["id_usuario"])) {
+                        $productos = new Productos();
+                        $id_usuario_actual = $_SESSION["id_usuario"];
+                        $historial_compras = $productos->ObtenerHistorial($id_usuario_actual);
 
-<div class="form-outline mb-4">
-  <input type="email" id="form2Example17" class="form-control form-control-lg" name="correo" />
-  <label class="form-label" for="form2Example17">Correo electrónico</label>
-</div>
+                        if (!empty($historial_compras)) {
+                            foreach ($historial_compras as $compra) {
+                                echo '<tr>';
 
-<div class="form-outline mb-4">
-  <input type="password" id="form2Example27" class="form-control form-control-lg" name="password"/>
-  <label class="form-label" for="form2Example27">Password</label>
-</div>
-<div class="form-outline mb-4">
-  <select name="tipo" class="form-control form-control-lg">
-    <option value="1">Administrador</option>
-    <option value="2">Cliente</option>
-  </select>
-  <label class="form-label" for="form2Example27">Tipo</label>
-</div>
-<div class="pt-1 mb-4">
-  <input class="btn btn-dark btn-lg btn-block" 
-  type="submit" value="Guardar">
-</div>
-</form>
+                                echo '<td>' . (isset($compra['id']) ? $compra['id'] : 'Desconocido') . '</td>';
+                                echo '<td>' . (isset($compra['nombre_producto']) ? $compra['nombre_producto'] : 'Desconocido') . '</td>';
+                                echo '<td>' . (isset($compra['modelo_producto']) ? $compra['modelo_producto'] : 'Desconocido') . '</td>';
+                                echo '<td>' . (isset($compra['precio_producto']) ? $compra['precio_producto'] : 'Desconocido') . '</td>';
+                                echo '<td>' . (isset($compra['fecha']) ? $compra['fecha'] : 'Desconocido') . '</td>';
+
+                                echo '</tr>';
+                            }
+                        } 
+                    } else {
+                        echo '<tr><td colspan="5">No tienes compras hechas.</td></tr>';
+                    }
+                    ?>
+                    
+
+                </tbody>
+            </table>
+           
+        </div>
    </section>
-   <section class="row">
+    <!-- Sección de redes sociales e información -->
+    <section class="row">
                 <div class="col-md-4">
                     <p>Hipertextos</p>
                     <a class="card-title mb-4 text-muted" href="#">Enlace 1</a>
@@ -107,7 +129,7 @@
                     <p>Redes Sociales</p>
                     <!-- Añade enlaces o íconos de redes sociales aquí -->
                     <a href="#" class="social-icon"><img src="../img/facebook.png" width="30px" alt="Facebook"></a>
-                    <a href="#" class="social-icon"><img src=".,/img/twitter.png" width="30px" alt="Twitter"></a>
+                    <a href="#" class="social-icon"><img src="../img/twitter.png" width="30px" alt="Twitter"></a>
                     <!-- Añade más redes sociales según sea necesario -->
                 </div>
                 <div class="col-md-4">

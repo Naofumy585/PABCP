@@ -43,7 +43,7 @@
                                     if(($correoUsuario!='') && $tipoUsuario==1)
                                     {
                                     echo '<li class="nav-item"><a class="nav-link" href="Catalogo.php">Catalago</a></li>';
-                                    echo '<li class="nav-item"><a class="nav-link" href="pedidos.php">Pedidos</a></li>';
+                                    echo '<li class="nav-item"><a class="nav-link" href="Productos/administrarP.php">Pedidos</a></li>';
                                     echo '<li class="nav-item"><a class="nav-link" href="../Usuario/administrarusuarios.php">Usuarios</a></li>';
                                     }
                                 ?>
@@ -60,8 +60,13 @@
                                         echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
                                     }
                                 ?>
+                                <?php
+                                    if(($correoUsuario!='') && $tipoUsuario==2)
+                                    {
+                                    echo '<li class="nav-item"><a href="Productos/Carrito.php"><../img src="img/b2.png" alt="Imagen 3"></a></li>';
+                                }
+                                ?>
                             </li>
-                            <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -95,41 +100,56 @@
             <h1 class="text-center">Productos</h1>
             <!-- Tabla con espacio para 4 imágenes -->
             <section id="Productos">
-            <div class="Img-content" class="row">
-                <div class="Caja" class="producto">
-                <?php
-                    // Aquí deberías incluir tu función CatalagoP()
-                    include_once '../Core/Usuario.php';
-                    $user=new Usuario();
-                    $productos = $user-> CatalagoP();
-
-                    // Verifica si hay productos para mostrar
-                    if (!empty($productos)) {
-                        echo '<table>';
-                        echo '<tr>';
-                        
-                        // Itera sobre los productos y crea las celdas de la tabla
-                        foreach ($productos as $producto) {
-                            echo '<td>';
-                            echo '<div class="producto-item">';
-                            echo '<img src="' . $producto['Img'] . '" alt="' . $producto['Nombre'] . '">';
-                            echo '<p>' . $producto['Nombre'] . '</p>';
-                            echo '<p>' . $producto['modelo'] . '</p>';
-                            echo '<p>$' . $producto['precio'] . '</p>';
-                            echo '</div>';
-                            echo '</td>';
+                <div class="Img-content" class="row">
+                    <div class="Caja" class="producto">
+                        <script>
+                        function verificarUsuario() {
+                            <?php
+                            // Verifica si hay un usuario logeado en PHP
+                            if ($correoUsuario == '') {
+                                echo 'alert("Debes iniciar sesión o registrarte para comprar o agregar al carrito.");';
+                                echo 'window.location.href = "../login.php";'; // Redirige a la página de inicio de sesión
+                            }
+                            ?>
                         }
+                    </script>
+                        <?php
+                        // Aquí deberías incluir tu función CatalagoP()
+                        include_once '../Core/Usuario.php';
+                        $user = new Usuario();
+                        $productos = $user->CatalagoP();
 
-                        echo '</tr>';
-                        echo '</table>';
-                    } else {
-                        echo '<p>No hay productos disponibles.</p>';
-                    }
-                ?>
+                        // Verifica si hay productos para mostrar
+                        if (!empty($productos)) {
+                            echo '<div class="row">';
+                            
+                            // Itera sobre los productos y crea las tarjetas (cards)
+                            foreach ($productos as $producto) {
+                                echo '<div class="col-md-4">';
+                                echo '<div class="card" style="width: 18rem;">';
+                                echo '<img src="' . $producto['Img'] . '" class="card-img-top" alt="' . $producto['Nombre'] . '">';
+                                echo '<div class="card-body">';
+                                echo '<h5 class="card-title">' . $producto['Nombre'] . '</h5>';
+                                echo '<p class="card-text">' . $producto['modelo'] . '</p>';
+                                echo '<p class="card-text">$' . $producto['precio'] . '</p>';
+                                
+                                // Modificación: Agregar la función verificarUsuario() en los botones
+                                echo '<a href="../Productos/Pago.php" class="btn btn-primary" onclick="verificarUsuario()">Comprar</a>';
+                                echo '<a href="../Productos/Carrito.php" class="btn btn-success" onclick="verificarUsuario()">Añadir al carrito</a>';
+                                
+                                echo '</div>';
+                                echo '</div>';
+                                echo '</div>';
+                            }
+
+                            echo '</div>';
+                        } else {
+                            echo '<p>No hay productos disponibles.</p>';
+                        }
+                        ?>      
+                    </div>
                 </div>
-               
-            </div>
-        </section><br>
+            </section><br>
 
             <div class="ver-mas" class="col-md-4">
                 <input type="button" class="btn btn-primary btn-block" style="background-color: rgb(218, 199, 35);" value="Ver más productos" onclick="window.location.href='/PABCP-main/P_Enlace/Productos.html';">
@@ -170,5 +190,15 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    function verificarUsuario() {
+                            <?php
+                            // Verifica si hay un usuario logeado en PHP
+                            if ($correoUsuario == '') {
+                                echo 'alert("Debes iniciar sesión o registrarte para comprar o agregar al carrito.");';
+                                echo '<a href="#" class="btn btn-success" onclick="verificarUsuario()">Aceptar</a>'; // Redirige a la página de inicio de sesión
+                            }
+                            ?>
+                        }
+                    </script>
 </body>
 </html>

@@ -43,7 +43,7 @@
                                     if(($correoUsuario!='') && $tipoUsuario==1)
                                     {
                                     echo '<li class="nav-item"><a class="nav-link" href="Catalogo.php">Catalago</a></li>';
-                                    echo '<li class="nav-item"><a class="nav-link" href="pedidos.php">Pedidos</a></li>';
+                                    echo '<li class="nav-item"><a class="nav-link" href="../Productos/administrarP.php">Pedidos</a></li>';
                                     echo '<li class="nav-item"><a class="nav-link" href="../Usuario/administrarusuarios.php">Usuarios</a></li>';
                                     }
                                 ?>
@@ -60,8 +60,13 @@
                                             echo '<a class="sesion" href="../cerrarSesion.php">Cerrar Sesión</a>';
                                         }
                                     ?>
+                                    <?php
+                                    if(($correoUsuario!='') && $tipoUsuario==2)
+                                    {
+                                    echo '<li class="nav-item"><a href="Productos/Carrito.php"><img src="../img/b2.png" alt="Imagen 3"></a></li>';
+                                }
+                                ?>
                                 </li>
-                                <li class="nav-item"><a href="#"><img src="../img/b2.png" alt="Imagen 3"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -95,7 +100,7 @@
             <h1 class="text-center">Productos</h1>
             <!-- Tabla con espacio para 4 imágenes -->
             <section id="Portafolio">
-                <a href="../Productos/AñadirP.php" class="btn btn-primary">Nuevo Producto</a>
+                <a href="../Productos/AnadirP.php" class="btn btn-primary">Nuevo Producto</a>
                 <div>
                     <table class="table table-light">
                         <thead>

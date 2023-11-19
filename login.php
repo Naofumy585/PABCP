@@ -26,7 +26,6 @@
                 <li class="nav-item"><a class="nav-link" href="./P_Enlace/Nosotros.php">Nosotros</a></li>
                 <li class="nav-item"><a class="nav-link disable" href="./P_Enlace/Contacto.php" tabindex="-1" aria-disabled="true">Contacto</a></li>
                 <li class="nav-item"><a href="login.php"><img src="./img/a2.png" alt="Imagen 2"></a></li>
-                    <li class="nav-item"><a href="#"><img src="./img/b2.png" alt="Imagen 3"></a></li>
             </ul>
         </nav>
     </section>

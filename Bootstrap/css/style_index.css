@@ -6,11 +6,10 @@ body {
 }
 
 body, div, form, nav, ul, li, img, p, h1, input, section {
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
-nav .container {
-    margin-bottom: 2rem;
+nav .container mb-2 {
     background-color: #e9a91f;
 }
 
@@ -23,8 +22,8 @@ section nav {
 }
 
 nav ul li img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 nav ul li:hover {
@@ -34,19 +33,17 @@ nav ul li:hover {
 
 nav .nav-item {
     list-style-type: none;
-    display:inline-block;
-    margin-right: 6px;
+    display: inline-block;
+    margin-right: 10px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    flex-wrap: wrap; /* Para permitir que los elementos se envuelvan en pantallas más pequeñas */
-    justify-content: space-between; /* Para distribuir uniformemente los elementos */
 }
 
 nav li {
-    margin-bottom: 15px; /* Espaciado entre elementos en pantallas más pequeñas */
+    margin-right: 15px;
 }
 
 .banner {
@@ -85,4 +82,68 @@ p {
 section footer {
     font-family: 'Footlight MT Light', sans-serif;
     text-align: center;
+}
+
+@media (max-width: 767px) {
+    nav ul li img {
+        width: 40px;
+        height: 40px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Footlight MT Light', sans-serif;
+    }
+
+    .ver-mas {
+        text-align: center;
+    }
+
+    .text-over-banner, .Caja2 {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        text-align: justify;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table img {
+        width: 25%;
+    }
+
+    h6 {
+        font-family: 'Footlight MT Light', sans-serif;
+        font-size: 12px;
+    }
+
+    section {
+        background-color: #e9a91f;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #Pie_p {
+        background-image: url(/img/bb/2.jpg);
+    }
+
+    td {
+        vertical-align: text-top;
+    }
+
+    p {
+        font-family: 'Footlight MT Light', sans-serif;
+        text-align: center;
+    }
+
+    div span {
+        text-align: center;
+    }
 }

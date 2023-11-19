@@ -5,7 +5,7 @@ body {
        padding: 0;
    }
    body, div, form, nav, ul, li, img, p, h1, input, section {
-       border-radius: 10px;
+       border-radius: 6px;
    }
    nav .container mb-2{
        background-color: #e9a91f;
@@ -76,3 +76,26 @@ section nav {
        font-family: 'Footlight MT Light', sans-serif;
        text-align: center;
    }
+   table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 767px) {
+    table {
+        overflow-clip-margin: 360pc;
+        display: block;
+    }
+
+    th, td {
+        display: block;
+        width: 75%;
+    }
+}

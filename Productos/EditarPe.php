@@ -62,41 +62,43 @@
                       <div class="col-md-6 col-lg-7 d-flex align-items-center">
                         <div class="card-body p-4 p-lg-5 text-black">
 
-                        <form action="modificarP.php" method="POST" enctype="multipart/form-data">
+                        <form action="ModificarPe.php" method="POST">
 
-                            <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Modificar producto</h5>
+                        <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Modificar pedido</h5>
 
-                            <input type="hidden" name="id" value="<?php echo $producto['id']; ?>">
+                        <input type="hidden" name="id" value="<?php echo $pedido['id']; ?>">
+                        <input type="hidden" name="Direccion" value="<?php echo $pedido['Direccion']; ?>">
+                        <input type="hidden" name="NombreRecibePedido" value="<?php echo $pedido['NombreRecibePedido']; ?>">
+                        <input type="hidden" name="CodigoPostal" value="<?php echo $pedido['CodigoPostal']; ?>">
+                        <input type="hidden" name="Telefono" value="<?php echo $pedido['Telefono']; ?>">
 
-                            <div class="form-outline mb-4">
-                                <input type="text" id="form2Example17" class="form-control form-control-lg" name="Nombre" value="<?php echo $producto['Nombre']; ?>">
-                                <label class="form-label" for="form2Example17">Nombre del producto</label>
-                            </div>
 
-                            <div class="form-outline mb-4">
-                                <input type="text" id="form2Example17" class="form-control form-control-lg" name="modelo" value="<?php echo $producto['modelo']; ?>">
-                                <label class="form-label" for="form2Example17">Modelo</label>
-                            </div>
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form2Example17" class="form-control form-control-lg" name="Direccion" value="<?php echo $pedido['Direccion']; ?>">
+                            <label class="form-label" for="form2Example17">Dirección</label>
+                        </div>
 
-                            <div class="form-outline mb-4">
-                                <input type="number" id="form2Example27" class="form-control form-control-lg" name="precio" value="<?php echo $producto['precio']; ?>">
-                                <label class="form-label" for="form2Example27">Precio</label>
-                            </div>
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form2Example17" class="form-control form-control-lg" name="NombreRecibePedido" value="<?php echo $pedido['NombreRecibePedido']; ?>">
+                            <label class="form-label" for="form2Example17">Nombre que recibe el pedido</label>
+                        </div>
 
-                            <div class="form-group mt-2">
-                                <input type="hidden" name="MAX_FILE_SIZE" value="512000"/>
-                                <p>Archivo: <input name="img" type="file"/> </p>
-                            </div>
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form2Example27" class="form-control form-control-lg" name="CodigoPostal" value="<?php echo $pedido['CodigoPostal']; ?>">
+                            <label class="form-label" for="form2Example27">Código Postal</label>
+                        </div>
 
-                            <div class="form-outline mb-4">
-                                <textarea id="form2Example17" class="form-control" name="descripcion"><?php echo $producto['Descripcion']; ?></textarea>
-                                <label class="form-label" for="form2Example17">Descripción</label>
-                            </div>
+                        <div class="form-outline mb-4">
+                            <input type="text" id="form2Example17" class="form-control form-control-lg" name="Telefono" value="<?php echo $pedido['Telefono']; ?>">
+                            <label class="form-label" for="form2Example17">Teléfono</label>
+                        </div>
 
-                            <div class="pt-1 mb-4">
-                                <input class="btn btn-dark btn-lg btn-block" type="submit" value="Guardar cambios">
-                            </div>
-                            </form>
+                        <div class="pt-1 mb-4">
+                            <input class="btn btn-dark btn-lg btn-block" type="submit" value="Guardar cambios">
+                        </div>
+                    </form>
+
+
                           
                         </div>
                       </div>
